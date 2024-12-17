@@ -1,0 +1,686 @@
+:root{
+    --sec: #C4302B;
+    --prim: #E9ECF5;
+    --thr: #2A2B39;
+    --linear-gradient: (135deg, #C4302B 10%, #2A2B39 100%);
+}
+
+body{
+    font-family: "Oswald", sans-serif;
+}
+
+
+
+
+
+/* header e navbar */
+header {
+    background-image:
+        linear-gradient(to bottom, rgba(40, 7, 48, 0.2), #2A2B39),
+        url('/public/media/ac-home.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* necessario per il pseudo-elemento */
+    border-bottom: 2px solid;
+    border-image: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%) 1;
+    box-shadow:
+        0 0 5px rgba(196, 48, 43, 0.5),
+        0 0 10px rgba(196, 48, 43, 0.3),
+        0 0 15px rgba(196, 48, 43, 0.2);
+}
+header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    filter: blur(3px);
+    z-index: 1;
+}
+
+.vh-95 {
+    height: 100vh;
+}
+
+header .bi:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.navbar {
+    background: transparent;
+    flex-wrap: nowrap;
+}
+
+.nav-container {
+    background-image: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    border: round 2px solid;
+    border-image: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%) 1;
+    box-shadow:
+        0 0 5px rgba(196, 48, 43, 0.5),
+        0 0 10px rgba(196, 48, 43, 0.3),
+        0 0 15px rgba(196, 48, 43, 0.2);
+    border-radius: 20px;
+}
+
+.nav-container::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.navbar-brand:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.navbar-nav .dropdown-menu{
+    position: absolute;
+}
+
+
+
+
+
+/* footer */
+.reviews-section {
+    background-image: url('/public/media/img-footer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+ }
+
+/* Stili form */
+.reviews-section .form-control {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+}
+
+.reviews-section .form-control::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.reviews-section .btn:hover {
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    color: white;
+}
+
+/* Effetti hover sui link */
+.reviews-section a:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+
+
+
+
+/* sezione news */
+.news {
+    background-color: var(--thr);
+}
+
+.news-item {
+    padding: 1rem;
+}
+
+.text-primary {
+    color: #C4302B !important;
+}
+
+.read-more {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.read-more:hover {
+    opacity: 0.8;
+}
+
+.news h3 {
+    font-size: 1.5rem;
+}
+
+/* Per rendere i titoli tutti della stessa altezza */
+.news-item h3 {
+    min-height: 3.6rem;
+}
+
+
+
+
+
+/* sezione nuove uscite */
+.new-releases {
+    background-color: var(--sec);
+}
+
+/* Video Container Styles */
+.video-container {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.play-button i {
+    color: white;
+}
+
+.video-title {
+    z-index: 2;
+    max-width: 600px;
+}
+
+/* Content Grid Styles */
+.content-wrapper {
+    max-width: 600px;
+}
+
+.text-primary {
+    color: #C4302B !important;
+}
+
+.read-more {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.read-more:hover {
+    opacity: 0.8;
+}
+
+.right-content{
+    background-color: var(--thr);
+}
+
+
+
+
+
+/* pagina create */
+/* Effetto hover sugli input */
+.form-control{
+    background-color: var(--prim);
+}
+.form-control:focus {
+    box-shadow: 0 0 15px rgba(255, 7, 7, 0.5);
+    border-color: var(--sec);
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Effetto hover sul bottone */
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Stile scrollbar per textarea */
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #343a40;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: var(--sec);
+    border-radius: 4px;
+}
+
+
+
+
+
+/* card */
+.card {
+    position: relative;
+    width: 290px;
+    height: 400px;
+    background-color: var(--prim);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 300px;
+    height: 410px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+
+  .heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  .card p:not(.heading) {
+    font-size: 14px;
+  }
+
+  .card p:last-child {
+    color: var(--sec);
+    font-weight: 600;
+  }
+
+  .card:hover::after {
+    filter: blur(30px);
+  }
+
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+  }
+
+  .link-games{
+    text-decoration: none;
+  }
+
+  .btnIndexGame{
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    border-radius: 5px;
+}
+
+.btnIndexGame:hover{
+    opacity: 0.9;
+    transform: translateY(2px);
+}
+
+
+
+
+
+
+  /* login */
+  .form-check-input:checked{
+    background-color: var(--sec);
+    border-color: var(--thr);
+  }
+
+  .logo{
+    width: 250px;
+  }
+
+  .link-rec{
+    text-decoration: none;
+    color: var(--sec);
+  }
+
+
+
+
+
+  /* card-show */
+  .cardShow {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background-color: var(--prim);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+  }
+
+  .cardShow-img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+  .cardShow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 410px;
+    height: 610px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .cardShow::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+
+  .cardShow p:not(.heading) {
+    font-size: 14px;
+  }
+
+  .cardShow p:last-child {
+    color: var(--sec);
+    font-weight: 600;
+  }
+
+  .cardShow:hover::after {
+    filter: blur(30px);
+  }
+
+  .cardShow:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+  }
+
+  .cardShow-body {
+    text-align: center;
+  }
+
+
+
+
+
+
+  /* dashboard */
+  .profile-dash {
+    background-color: var(--prim);
+    border-radius: 8px;
+    position: relative;
+}
+
+.profile-dash::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    z-index: -1;
+    filter: blur(3px);
+}
+
+.card-dash {
+    background-color: var(--prim);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 0 15px rgba(196, 48, 43, 0.3);
+}
+
+.card-dash::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+}
+
+.btn-dash {
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-dash:hover {
+    opacity: 0.9;
+}
+
+.img-dash{
+    width: 150px;
+    object-fit: cover;
+    border: 3px solid var(--thr);
+}
+
+
+
+
+
+/* console show */
+.btn-consoleShow {
+    background: linear-gradient(135deg, #C4302B 10%, #2A2B39 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-consoleShow:hover{
+    opacity: 0.9;
+    transform: translateY(2px);
+}
+
+
+
+
+
+
+
+
+
+#scrollToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none; /* Nascondo inizialmente */
+    background-color: var(--sec);
+    color: var(--thr);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 430px) {
+    .nav-container {
+        flex-wrap: wrap; /* Permette al contenuto di andare a capo */
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+        display: block; /* Mostra il toggler su mobile */
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%; /* Occupa tutta la larghezza */
+        display: none; /* Nascosto di default */
+    }
+
+    .navbar-collapse.show {
+        display: block; /* Mostrato quando attivo */
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+    }
+
+    /* Reset margin per mobile */
+    .navbar-nav.mx-auto {
+        margin: 1rem 0 !important;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 8px;
+    }
+    .card-img {
+        height: 180px;
+    }
+    .heading {
+        font-size: 16px;
+    }
+    .card p {
+        font-size: 12px;
+    }
+
+    .games-list .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card::before{
+        background: none;
+    }
+
+    .card::after{
+        background: none;
+    }
+
+    .shadow-lg{
+        box-shadow: none !important;
+    }
+
+    .cardShow{
+        background-color: white;
+        justify-content: space-evenly !important;
+    }
+
+    .cardShow::before{
+        background: none;
+    }
+
+    .cardShow::after{
+        background: none;
+    }
+}
+
+/* Stili per desktop */
+@media (min-width: 431px) {
+    .navbar-toggler {
+        display: none; /* Nascondi il toggler su desktop */
+    }
+
+    .navbar-collapse {
+        display: flex !important; /* Mostra sempre il menu su desktop */
+        flex-grow: 1;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+}
