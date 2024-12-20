@@ -105,5 +105,7 @@ Questo progetto dimostra:
 - Blade Template Engine
 - Bootstrap
 - Laravel Fortify per autenticazione
-
+- css
+- html
+- javascript
 
