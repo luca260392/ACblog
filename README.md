@@ -50,13 +50,6 @@ Questo progetto dimostra:
 - Upload logo
 - Validazione form avanzata
 
-### Sistema News/Articoli
-- Visualizzazione paginata (9 articoli per pagina)
-- Generazione automatica slug SEO-friendly
-- Categorizzazione degli articoli
-- Sistema di immagini in evidenza
-
-
 ## 🔒 Sicurezza
 - Protezione CSRF su tutti i form
 - Validazione robusta lato server
@@ -76,6 +69,11 @@ Questo progetto dimostra:
 
 ## 🚀 Possibili Implementazioni Future
 
+### Sistema News/Articoli
+- Visualizzazione paginata (esempio: 9 articoli per pagina)
+- Categorizzazione degli articoli
+- Sistema di immagini in evidenza
+  
 ### Sistema di Recensioni
 - **Valutazioni a stelle per i giochi**: Implementazione di un sistema di rating da 1 a 5 stelle per ogni gioco, con calcolo della media delle valutazioni
 - **Commenti degli utenti**: Sistema di commenti gerarchico per permettere discussioni e feedback sui giochi
